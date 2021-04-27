@@ -1,0 +1,98 @@
+.header {
+
+
+    
+    &__nav {
+        padding: 1.7rem 2.4rem;
+        position: relative;
+        background-color: $White;
+
+
+        &-logo {
+            width: 12rem;
+            height: 2rem;
+        }
+
+    }
+
+    &__ul {
+
+        &-list {
+
+            &:not(:last-child) {
+                padding-right: 3.2rem;
+
+            }
+
+        }
+
+        &-link {
+            font-size: $font-sm;
+            color: $GrayishBlue;
+            transition: all .3s ease-in-out;
+            padding-bottom: 2rem;
+            border-bottom: .5rem solid transparent;
+
+
+            &:hover,
+            &:active {
+                color: $DarkBlue;
+                font-weight: 700;
+                border-bottom: .5rem solid $LimeGreen;
+            }
+        }
+    }
+
+    &__menu {
+        cursor: pointer;
+
+        >span {
+            display: block;
+            width: 2.6rem;
+            height: 2px;
+            background-color: $DarkBlue;
+            transition: all 500ms ease-in-out;
+            transform-origin: 3px 1px;
+
+            &:not(:last-child) {
+                margin-bottom: 5px;
+            }
+
+        }
+
+        &.open {
+
+            >span {
+
+                &:first-child {
+                    transform: rotate(45deg);
+                }
+
+                &:nth-child(2) {
+                    transform: translateX(-1rem);
+                    opacity: 0;
+
+                }
+
+                &:last-child {
+                    transform: rotate(-45deg);
+
+                }
+            }
+
+        }
+
+    }
+
+}
+
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*  animation: fade-in 900ms ease-in-out  forwards; */
+   background: linear-gradient(to bottom, $DarkBlue, rgba(0, 0, 0, 0.404));
+    transition: all 900ms;
+}

@@ -1,0 +1,22 @@
+{
+  "name": "front-end-easybank",
+  "version": "1.0.0",
+  "description": "![Design preview for the Easybank landing page coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass  sass/style.scss  dist/css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cemmanuelonyema/frontend-master-easybank.git"
+  },
+  "author": "C emmanuel Onyema",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cemmanuelonyema/frontend-master-easybank/issues"
+  },
+  "homepage": "https://github.com/cemmanuelonyema/frontend-master-easybank#readme",
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  }
+}

@@ -1,0 +1,90 @@
+
+*,*::before, *::after{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: inherit;
+}
+html{
+    font-size: 62.5%;
+    line-height: 1.5 ;
+    font-family: "Public sans", sans-serif;
+}
+
+body{
+    font-size: 1.8rem;
+    font-weight: 300;
+    
+    color: $GrayishBlue;
+}
+
+.container{
+    padding: 6rem 2.4rem; }
+
+    .hidden{
+        visibility: hidden;
+        opacity: 0;
+    }
+
+ //section{
+  // padding: 4rem 0; }
+
+
+
+//components
+
+.btn{
+    color: $White;
+    border-radius: 2.5rem;
+    padding: 1.5rem 3rem;
+    cursor: pointer;
+    font-weight: 400;
+    opacity: 1;
+    transition: .3s;
+    display: inline-block;
+    background: linear-gradient(to right, $LimeGreen, $BrightCyan);
+
+    &:hover{
+        opacity: 0.7;                                           
+    }    
+}
+
+////////////////////////helper classes
+
+
+//flex styles
+.flex{
+    display:  flex;
+
+    &-jc-c{
+        justify-content: center;
+    }
+
+    &-jc-sb{
+
+        justify-content: space-between;
+    }
+
+    &-ai-c{
+
+        align-items: center;
+
+    }
+}
+
+//visibility
+
+.h-o-m{ //hide-on-mobile
+    @include breakpoint-down(medium){
+        display: none;
+    }
+}
+
+//.h-o-t{ //hide-on-tab)
+
+.h-o-d{ //hide-on-desktop
+    @include breakpoint-up(large){
+        display: none;
+    }
+}
